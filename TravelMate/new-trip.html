@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Matching</title>
+    <style>
+        body {
+            background-color: #1E3B62;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 2.5em;
+            color: #f0f0f0;
+        }
+
+        .form-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            width: 80%; /* Ensure content is within the screen */
+        }
+
+        /* Style for the toggle switch with text inside */
+        .toggle-container {
+            position: relative;
+            width: 120px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ccc;
+            border-radius: 50px;
+            transition: background-color 0.3s;
+            cursor: pointer;
+            margin-right: 20px; /* Space between toggle and date input */
+        }
+
+        .toggle-container input[type="checkbox"] {
+            display: none; /* Hide the default checkbox */
+        }
+
+        .toggle-container label {
+            position: absolute;
+            font-size: 1em;
+            color: white;
+            font-weight: bold;
+            transition: 0.3s;
+            left: 8px; /* Move the text closer to the left */
+            top: 4px; /* Move the text up */
+        }
+
+        .toggle-container input[type="checkbox"]:checked + label {
+            color: #1E3B62; /* Change text color when checked */
+        }
+
+        .toggle-container input[type="checkbox"]:checked + label::before {
+            transform: translateX(40px); /* Move text on check */
+        }
+
+        .toggle-container label::before {
+            content: 'Flight'; /* Default text */
+            position: absolute;
+            left: 0; /* Adjusted to align closer to the left */
+            top: 0; /* Move text up */
+            transition: 0.3s;
+        }
+
+        .toggle-container input[type="checkbox"]:checked + label::before {
+            content: 'Event'; /* Text changes to Event when checked */
+        }
+
+        /* Style for the date input */
+        .date-input {
+            width: 200px;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 1em;
+            border: none;
+            background-color: #f0f0f0;
+        }
+
+        .date-input::before {
+            color: #bbb; /* Placeholder color */
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Group Matching</h1>
+
+    <!-- Form Section for Flight/Event Toggle and Date -->
+    <div class="form-section">
+        <!-- Flight/Event Toggle -->
+        <div class="toggle-container">
+            <input type="checkbox" id="flightEventToggle">
+            <label for="flightEventToggle"></label>
+        </div>
+
+        <!-- Date Input -->
+        <input type="date" id="tripDate" class="date-input" placeholder="Date">
+    </div>
+
+    <script>
+        // You can add some JavaScript functionality if you want to change labels or behavior dynamically
+        const toggle = document.getElementById('flightEventToggle');
+        const tripDate = document.getElementById('tripDate');
+
+        toggle.addEventListener('change', function() {
+            if (toggle.checked) {
+                // Event is selected
+                console.log('Event selected');
+            } else {
+                // Flight is selected
+                console.log('Flight selected');
+            }
+        });
+    </script>
+
+</body>
+</html>

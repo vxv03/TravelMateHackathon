@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - TravelMate</title>
+    <style>
+        /* Apply background color to the whole page */
+        body {
+            background-color: #1E3B62;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center items horizontally */
+        }
+
+        /* Center the title with some margin from the top */
+        h1 {
+            text-align: center;
+            margin-top: 20px;  /* Reduced margin to bring title closer to the top */
+            font-size: 2.5em;
+            color: #f0f0f0;
+        }
+
+        /* Subheading styling */
+        .subheading {
+            text-align: center;
+            font-size: 1.8em;  /* Increased font size for better visibility */
+            color: #f0f0f0;
+            margin-top: 5px;  /* Reduced margin to bring subheading closer to the title */
+        }
+
+        /* Styling for the instructions */
+        .instructions {
+            text-align: center;
+            color: #f0f0f0;
+            margin: 10px 0;  /* Reduced margin to bring the instructions closer to the subheading */
+            font-size: 1em;
+        }
+
+        /* Style for the inputs */
+        input[type="email"], input[type="password"], input[type="text"] {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none; /* Remove the border */
+            background-color: #f0f0f0; /* Grey background for input boxes */
+            font-size: 1em;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 5px;
+        }
+
+        /* Optional: Remove focus outline when clicking on input */
+        input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focus {
+            outline: none;
+        }
+
+        /* Submit button styling */
+        button {
+            width: 90%;
+            padding: 10px 16px; /* Size of the button */
+            margin: 10px 0;
+            background-color: #9ac4e4; /* Greenish-blue color */
+            border: none;
+            color: white;
+            font-size: 1em; /* Adjusted font size */
+            border-radius: 5px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Link to return to the home page */
+        .back-link {
+            margin-top: 20px;
+            color: #9ac4e4;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            text-decoration: underline; /* Underline when hovering */
+        }
+    </style>
+</head>
+<body>
+    <h1>TravelMate</h1>
+
+    <!-- Subheading -->
+    <div class="subheading">A new way to ride!</div>
+
+    <!-- Instructions for sign-up -->
+    <div class="instructions">
+        Use Corporate or Student email to start riding.
+    </div>
+
+    <!-- Sign Up Form -->
+    <form>
+        <!-- Email input -->
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <!-- Password input -->
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+        <!-- Full Name input -->
+        <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
+
+        <!-- Username input -->
+        <input type="text" id="username" name="username" placeholder="Choose a username" required>
+
+        <!-- Submit Button -->
+        <button type="submit">Sign Up</button>
+    </form>
+
+    <!-- Return to Home Link -->
+    <a href="index.html" class="back-link">Return to Home</a>
+</body>
+</html>
